@@ -1,0 +1,63 @@
+
+--{
+---- ╭─────────────────────────────────────────────────────────╮
+---- │ diffview                                                │
+---- │ gitのdiffの操作。設定必要だけどしてないので使えない     │
+---- ╰─────────────────────────────────────────────────────────╯
+--"sindrets/diffview.nvim",
+--},
+--
+
+--{
+-- ╭─────────────────────────────────────────────────────────╮
+-- │ in-and-out                                              │
+-- │ クオートから自動で抜けるやつ。なんか動かない            │
+-- ╰─────────────────────────────────────────────────────────╯
+--"ysmb-wtsg/in-and-out.nvim",
+--keys = {
+--{
+--"<C-CR>",
+--function()
+--require("in-and-out").in_and_out()
+--end,
+--mode = "i",
+--},
+--},
+--},
+
+--{
+---- ╭─────────────────────────────────────────────────────────╮
+---- │ Namu                                                    │
+---- │ シンボルを検索してジャンプ                              │
+---- ╰─────────────────────────────────────────────────────────╯
+--"bassamsdata/namu.nvim",
+--opts = {
+--global = {},
+--namu_symbols = { -- Specific Module options
+--options = {},
+--},
+--},
+---- === Suggested Keymaps: ===
+--vim.keymap.set("n", "<leader>ss", ":Namu symbols<cr>", {
+--desc = "Jump to LSP symbol",
+--silent = true,
+--}),
+--vim.keymap.set("n", "<leader>sw", ":Namu workspace<cr>", {
+--desc = "LSP Symbols - Workspace",
+--silent = true,
+--}),
+--},
+--
+--
+--{
+--"jameswolensky/marker-groups.nvim",
+--opts = {
+--keymaps = { enabled = false },
+--},
+--config = function(_, opts)
+--require("marker-groups").setup(opts)
+--
+---- ここに自分の再バインドを書く
+--vim.keymap.set("n", "<leader>na", "<cmd>MarkerAdd<cr>")
+--end,
+--},
